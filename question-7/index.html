@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="nav mt-5">
+        <section class="navItems">
+          <p
+            id="navItem"
+            class="fs-3 cursor-pointer bg-danger bg-opacity-50 p-2 rounded-1"
+          >
+            Sweeties (click me)!
+          </p>
+          <ul
+            style="height: 0; transition: all 1s"
+            id="list"
+            class="list-unstyled fs-5 bg-primary rounded-2 overflow-hidden px-3 text-white"
+          >
+            <li class="my-4 cursor-pointer">Cake</li>
+            <li class="my-4 cursor-pointer">Donut</li>
+            <li class="my-4 cursor-pointer">Honey</li>
+          </ul>
+        </section>
+      </nav>
+    </main>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="app.js"></script>
+  </body>
+</html>
