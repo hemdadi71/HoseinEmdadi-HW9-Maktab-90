@@ -1,31 +1,36 @@
 'use strict';
 const container = document.getElementById('container');
-const tooltip = document.getElementById('tooltip');
+const tooltip = document.querySelectorAll('.tooltips');
 
 // ....................................................................................
 const showTooltip = e => {
   if (e.currentTarget.childNodes[1]) return;
   const toolTipText = document.createElement('div');
   toolTipText.className =
-    'fs-6 bg-dark bg-opacity-25 w-25 p-2 rounded-2 position-absolute text-center m-auto start-0 end-0 text-dark';
+    'fs-6 bg-dark w-50 p-2 rounded-2 position-absolute text-center m-auto start-0 end-0 text-white';
   toolTipText.id = 'tooltiptext';
-  toolTipText.innerHTML = 'Tooltip text';
-  tooltip.append(toolTipText);
+  toolTipText.innerHTML = `This Tooltip For ${e.currentTarget.innerText}`;
+  toolTipText.style.zIndex = '1';
+  e.currentTarget.append(toolTipText);
 
   if (
-    getComputedStyle(tooltip).marginTop > getComputedStyle(toolTipText).height
+    e.currentTarget.getBoundingClientRect().top <
+    parseInt(getComputedStyle(toolTipText).height)
   ) {
-    toolTipText.style.bottom = '40px';
-  } else {
     toolTipText.style.bottom = '-45px';
+  } else {
+    toolTipText.style.bottom = '40px';
   }
   // console.log(getComputedStyle(tooltip).marginTop);
-  // console.log(getComputedStyle(toolTipText).height);
+  console.log(parseInt(getComputedStyle(toolTipText).height));
+  console.log(e.currentTarget.getBoundingClientRect().top);
 };
 // ................................................................................
 const hideTooltip = e => {
   e.currentTarget.childNodes[1].remove();
 };
 // ....................................................................................
-tooltip.addEventListener('mouseenter', showTooltip);
-tooltip.addEventListener('mouseleave', hideTooltip);
+tooltip.forEach(element => element.addEventListener('mouseenter', showTooltip));
+tooltip.forEach(element => element.addEventListener('mouseleave', hideTooltip));
+// tooltip.addEventListener('mouseenter', showTooltip);
+// tooltip.addEventListener('mouseleave', hideTooltip);
