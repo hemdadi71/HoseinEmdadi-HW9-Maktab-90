@@ -13,38 +13,41 @@
   </head>
   <body class="bg-bodys font-vazir">
     <main class="container-fluid">
-      <section class="row mt-5 d-flex justify-content-between px-5">
+      <section
+        class="row mt-5 d-flex justify-content-center justify-content-md-between px-3 px-sm-4 px-xl-5"
+      >
         <!-- Items -->
-        <section class="col-8 bg-main rounded-2 pb-4 mb-5">
+        <section
+          class="col-12 bg-main rounded-2 pb-4 mb-5 col-md-7 col-xl-8 col-xxl-9"
+        >
           <p class="text-center fs-5 py-3 border-3 border-bottom">
             رستوران مک دونالد شعبه تهران
           </p>
-          <section
-            class="overflow-y-auto overflow-x-hidden h-400"
-            class="overflow-x-hidden overflow-y-auto"
-          >
-            <div class="row px-4">
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
+          <section class="overflow-y-auto overflow-x-hidden">
+            <div class="row px-0 px-sm-1 px-md-2 px-xl-3 px-xxl-4">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-md-block position-relative"
+                >
                   <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
+                    <div class="col-sm-6 w-10 d-flex justify-content-center">
                       <img
                         src="img/hamburger.png"
                         class="img-fluid rounded-start"
                         alt="hamburger"
                       />
                     </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">همبرگر معمولی</h5>
-                        <p class="fs-7 mb-6">8000 تومان</p>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">همبرگر معمولی</h5>
+                        <p data-id="1" class="price fs-7 mb-6"></p>
                         <div
                           id="card-icon"
-                          class="d-flex justify-content-between h-5"
+                          class="d-flex justify-content-between"
                         >
-                          <section class="d-flex">
+                          <section class="d-flex justify-content-between">
                             <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
                               ><img src="img/add.png" alt="add" width="9px"
                             /></span>
                             <span
@@ -52,11 +55,11 @@
                               >0</span
                             >
                             <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
                               ><img src="img/minus.png" alt="minus" width="9px"
                             /></span>
                           </section>
-                          <section><p>0 تومان</p></section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
                         </div>
                       </div>
                     </div>
@@ -64,240 +67,31 @@
                 </div>
               </div>
               <!-- ........................................................................ -->
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
                   <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
+                    <div class="col-sm-6 w-10 d-flex justify-content-center">
                       <img
                         src="img/hamburger.png"
                         class="img-fluid rounded-start"
-                        alt="hamburger"
-                      />
-                    </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">همبرگر مخصوص</h5>
-                        <p class="fs-7 mb-6">10000 تومان</p>
-                        <div
-                          id="card-icon"
-                          class="d-flex justify-content-between h-5"
-                        >
-                          <section class="d-flex">
-                            <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
-                              ><img src="img/add.png" alt="add" width="9px"
-                            /></span>
-                            <span
-                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
-                              >0</span
-                            >
-                            <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
-                              ><img src="img/minus.png" alt="minus" width="9px"
-                            /></span>
-                          </section>
-                          <section><p>0 تومان</p></section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row px-4">
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
-                  <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
-                      <img
-                        src="img/hamburger.png"
-                        class="img-fluid rounded-start"
-                        alt="hamburger"
-                      />
-                    </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">
-                          همبرگر معمولی با قارچ و پنیر
-                        </h5>
-                        <p class="fs-7 mb-6">10000 تومان</p>
-                        <div
-                          id="card-icon"
-                          class="d-flex justify-content-between h-5"
-                        >
-                          <section class="d-flex">
-                            <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
-                              ><img src="img/add.png" alt="add" width="9px"
-                            /></span>
-                            <span
-                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
-                              >0</span
-                            >
-                            <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
-                              ><img src="img/minus.png" alt="minus" width="9px"
-                            /></span>
-                          </section>
-                          <section><p>0 تومان</p></section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- ........................................................................ -->
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
-                  <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
-                      <img
-                        src="img/hamburger.png"
-                        class="img-fluid rounded-start"
-                        alt="hamburger"
-                      />
-                    </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">
-                          همبرگر مخصوص با قارچ و پنیر
-                        </h5>
-                        <p class="fs-7 mb-6">20000 تومان</p>
-                        <div
-                          id="card-icon"
-                          class="d-flex justify-content-between h-5"
-                        >
-                          <section class="d-flex">
-                            <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
-                              ><img src="img/add.png" alt="add" width="9px"
-                            /></span>
-                            <span
-                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
-                              >0</span
-                            >
-                            <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
-                              ><img src="img/minus.png" alt="minus" width="9px"
-                            /></span>
-                          </section>
-                          <section><p>0 تومان</p></section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row px-4">
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
-                  <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
-                      <img
-                        src="img/french_fries.png"
-                        class="img-fluid rounded-start"
-                        alt="hamburger"
-                      />
-                    </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">
-                          سیب زمینی سرخ کرده ویژه
-                        </h5>
-                        <p class="fs-7 mb-6">25000 تومان</p>
-                        <div
-                          id="card-icon"
-                          class="d-flex justify-content-between h-5"
-                        >
-                          <section class="d-flex">
-                            <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
-                              ><img src="img/add.png" alt="add" width="9px"
-                            /></span>
-                            <span
-                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
-                              >0</span
-                            >
-                            <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
-                              ><img src="img/minus.png" alt="minus" width="9px"
-                            /></span>
-                          </section>
-                          <section><p>0 تومان</p></section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- ........................................................................ -->
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
-                  <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
-                      <img
-                        src="img/french_fries.png"
-                        class="img-fluid rounded-start"
-                        alt="hamburger"
-                      />
-                    </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">سیب زمینی سرخ کرده</h5>
-                        <p class="fs-7 mb-6">10000 تومان</p>
-                        <div
-                          id="card-icon"
-                          class="d-flex justify-content-between h-5"
-                        >
-                          <section class="d-flex">
-                            <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
-                              ><img src="img/add.png" alt="add" width="9px"
-                            /></span>
-                            <span
-                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
-                              >0</span
-                            >
-                            <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
-                              ><img src="img/minus.png" alt="minus" width="9px"
-                            /></span>
-                          </section>
-                          <section><p>0 تومان</p></section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row px-4">
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
-                  <div class="row">
-                    <div class="col-md-4 w-10">
-                      <img
-                        src="img/soda.png"
                         alt="hamburger"
                         width="100%"
                         height="100%"
                       />
                     </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">نوشابه رژیمی</h5>
-                        <p class="fs-7 mb-6">6000 تومان</p>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">همبرگر مخصوص</h5>
+                        <p data-id="2" class="price fs-7 mb-6"></p>
                         <div
                           id="card-icon"
-                          class="d-flex justify-content-between h-5"
+                          class="d-flex justify-content-between"
                         >
-                          <section class="d-flex">
+                          <section class="d-flex justify-content-between">
                             <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
                               ><img src="img/add.png" alt="add" width="9px"
                             /></span>
                             <span
@@ -305,51 +99,11 @@
                               >0</span
                             >
                             <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
                               ><img src="img/minus.png" alt="minus" width="9px"
                             /></span>
                           </section>
-                          <section><p>0 تومان</p></section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- ........................................................................ -->
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
-                  <div class="row">
-                    <div class="col-md-4 w-10">
-                      <img
-                        src="img/soda.png"
-                        class="img-fluid rounded-start"
-                        alt="hamburger"
-                      />
-                    </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">نوشابه</h5>
-                        <p class="fs-7 mb-6">5000 تومان</p>
-                        <div
-                          id="card-icon"
-                          class="d-flex justify-content-between h-5"
-                        >
-                          <section class="d-flex">
-                            <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
-                              ><img src="img/add.png" alt="add" width="9px"
-                            /></span>
-                            <span
-                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
-                              >0</span
-                            >
-                            <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
-                              ><img src="img/minus.png" alt="minus" width="9px"
-                            /></span>
-                          </section>
-                          <section><p>0 تومان</p></section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
                         </div>
                       </div>
                     </div>
@@ -358,28 +112,34 @@
               </div>
             </div>
 
-            <div class="row px-4">
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
+            <div class="row px-0 px-sm-1 px-md-2 px-xl-3 px-xxl-4">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
                   <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
+                    <div class="col-sm-6 w-10 d-flex justify-content-center">
                       <img
-                        src="img/salad.png"
+                        src="img/hamburger.png"
                         class="img-fluid rounded-start"
                         alt="hamburger"
+                        width="100%"
+                        height="100%"
                       />
                     </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">سالاد فصل</h5>
-                        <p class="fs-7 mb-6">8000 تومان</p>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">
+                          همبرگر معمولی با قارچ و پنیر
+                        </h5>
+                        <p data-id="3" class="price fs-7 mb-6"></p>
                         <div
                           id="card-icon"
-                          class="d-flex justify-content-between h-5"
+                          class="d-flex justify-content-between"
                         >
-                          <section class="d-flex">
+                          <section class="d-flex justify-content-between">
                             <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
                               ><img src="img/add.png" alt="add" width="9px"
                             /></span>
                             <span
@@ -387,11 +147,11 @@
                               >0</span
                             >
                             <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
                               ><img src="img/minus.png" alt="minus" width="9px"
                             /></span>
                           </section>
-                          <section><p>0 تومان</p></section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
                         </div>
                       </div>
                     </div>
@@ -399,27 +159,31 @@
                 </div>
               </div>
               <!-- ........................................................................ -->
-              <div class="col-6">
-                <div class="card mb-3 border-0 pb-2 px-1">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
                   <div class="row">
-                    <div class="col-md-4 w-10 d-flex">
+                    <div class="col-sm-6 w-10 d-flex">
                       <img
-                        src="img/salad.png"
+                        src="img/hamburger.png"
                         class="img-fluid rounded-start"
                         alt="hamburger"
                       />
                     </div>
-                    <div class="col-md-8 mt-2">
-                      <div class="w-255">
-                        <h5 class="fs-6 fw-bold mb-6">سالاد سزار</h5>
-                        <p class="fs-7 mb-6">25000 تومان</p>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">
+                          همبرگر مخصوص با قارچ و پنیر
+                        </h5>
+                        <p data-id="4" class="price fs-7 mb-6"></p>
                         <div
                           id="card-icon"
-                          class="d-flex justify-content-between h-5"
+                          class="d-flex justify-content-between"
                         >
-                          <section class="d-flex">
+                          <section class="d-flex justify-content-between">
                             <span
-                              class="bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
                               ><img src="img/add.png" alt="add" width="9px"
                             /></span>
                             <span
@@ -427,11 +191,271 @@
                               >0</span
                             >
                             <span
-                              class="bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
                               ><img src="img/minus.png" alt="minus" width="9px"
                             /></span>
                           </section>
-                          <section><p>0 تومان</p></section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row px-0 px-sm-1 px-md-2 px-xl-3 px-xxl-4">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
+                  <div class="row">
+                    <div class="col-sm-6 w-10 d-flex">
+                      <img
+                        src="img/french_fries.png"
+                        class="img-fluid rounded-start"
+                        alt="hamburger"
+                      />
+                    </div>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">
+                          سیب زمینی سرخ کرده ویژه
+                        </h5>
+                        <p data-id="5" class="price fs-7 mb-6"></p>
+                        <div
+                          id="card-icon"
+                          class="d-flex justify-content-between"
+                        >
+                          <section class="d-flex justify-content-between">
+                            <span
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              ><img src="img/add.png" alt="add" width="9px"
+                            /></span>
+                            <span
+                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
+                              >0</span
+                            >
+                            <span
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              ><img src="img/minus.png" alt="minus" width="9px"
+                            /></span>
+                          </section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ........................................................................ -->
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
+                  <div class="row">
+                    <div class="col-sm-6 w-10 d-flex">
+                      <img
+                        src="img/french_fries.png"
+                        class="img-fluid rounded-start"
+                        alt="hamburger"
+                      />
+                    </div>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">سیب زمینی سرخ کرده</h5>
+                        <p data-id="6" class="price fs-7 mb-6"></p>
+                        <div
+                          id="card-icon"
+                          class="d-flex justify-content-between"
+                        >
+                          <section class="d-flex justify-content-between">
+                            <span
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              ><img src="img/add.png" alt="add" width="9px"
+                            /></span>
+                            <span
+                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
+                              >0</span
+                            >
+                            <span
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              ><img src="img/minus.png" alt="minus" width="9px"
+                            /></span>
+                          </section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row px-0 px-sm-1 px-md-2 px-xl-3 px-xxl-4">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
+                  <div class="row">
+                    <div class="col-sm-6 w-10 d-flex">
+                      <img
+                        src="img/soda.png"
+                        class="img-fluid rounded-start"
+                        alt="hamburger"
+                      />
+                    </div>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">نوشابه رژیمی</h5>
+                        <p data-id="7" class="price fs-7 mb-6"></p>
+                        <div
+                          id="card-icon"
+                          class="d-flex justify-content-between"
+                        >
+                          <section class="d-flex justify-content-between">
+                            <span
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              ><img src="img/add.png" alt="add" width="9px"
+                            /></span>
+                            <span
+                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
+                              >0</span
+                            >
+                            <span
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              ><img src="img/minus.png" alt="minus" width="9px"
+                            /></span>
+                          </section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ........................................................................ -->
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
+                  <div class="row">
+                    <div class="col-sm-6 w-10 d-flex">
+                      <img
+                        src="img/soda.png"
+                        class="img-fluid rounded-start"
+                        alt="hamburger"
+                      />
+                    </div>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">نوشابه</h5>
+                        <p data-id="8" class="price fs-7 mb-6"></p>
+                        <div
+                          id="card-icon"
+                          class="d-flex justify-content-between"
+                        >
+                          <section class="d-flex justify-content-between">
+                            <span
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              ><img src="img/add.png" alt="add" width="9px"
+                            /></span>
+                            <span
+                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
+                              >0</span
+                            >
+                            <span
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              ><img src="img/minus.png" alt="minus" width="9px"
+                            /></span>
+                          </section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row px-0 px-sm-1 px-md-2 px-xl-3 px-xxl-4">
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
+                  <div class="row">
+                    <div class="col-sm-6 w-10 d-flex">
+                      <img
+                        src="img/salad.png"
+                        class="img-fluid rounded-start"
+                        alt="hamburger"
+                      />
+                    </div>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">سالاد فصل</h5>
+                        <p data-id="9" class="price fs-7 mb-6"></p>
+                        <div
+                          id="card-icon"
+                          class="d-flex justify-content-between"
+                        >
+                          <section class="d-flex justify-content-between">
+                            <span
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              ><img src="img/add.png" alt="add" width="9px"
+                            /></span>
+                            <span
+                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
+                              >0</span
+                            >
+                            <span
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              ><img src="img/minus.png" alt="minus" width="9px"
+                            /></span>
+                          </section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ........................................................................ -->
+              <div class="col-12 col-sm-6">
+                <div
+                  class="card mb-3 border-0 pb-2 px-1 d-flex d-md-block position-relative"
+                >
+                  <div class="row">
+                    <div class="col-sm-6 w-10 d-flex">
+                      <img
+                        src="img/ceasar.png"
+                        class="img-fluid rounded-start"
+                        alt="hamburger"
+                      />
+                    </div>
+                    <div class="col-6 col-md-5 mt-2 p-0 flex-grow-1">
+                      <div>
+                        <h5 class="fs-7 fw-bold mb-6">سالاد سزار</h5>
+                        <p data-id="10" class="price fs-7 mb-6"></p>
+                        <div
+                          id="card-icon"
+                          class="d-flex justify-content-between"
+                        >
+                          <section class="d-flex justify-content-between">
+                            <span
+                              class="add bg-button p-1 py-0 rounded-end d-flex align-items-center justify-content-center h-5 cursor-pointer"
+                              ><img src="img/add.png" alt="add" width="9px"
+                            /></span>
+                            <span
+                              class="mx-2 d-block h-5 d-flex align-items-center justify-content-center"
+                              >0</span
+                            >
+                            <span
+                              class="minus bg-button py-0 p-1 rounded-start d-block h-5 d-flex align-items-center justify-content-center cursor-pointer"
+                              ><img src="img/minus.png" alt="minus" width="9px"
+                            /></span>
+                          </section>
+                          <p class="position-absolute start-0 px-2">0 تومان</p>
                         </div>
                       </div>
                     </div>
@@ -443,10 +467,12 @@
         </section>
 
         <!--....................................... Order................................................... -->
-        <section class="col-4 bg-main w-25 h-25 p-3 rounded-2 position-sticky">
+        <section
+          class="col-8 col-sm-5 col-md-4 col-xl-3 col-xxl-2 mb-4 bg-main h-25 p-3 rounded-2 position-sticky sticky-top"
+        >
           <p id="total" class="d-flex fs-7 justify-content-between">
             <span id="total-title">جمع کل سفارشات:</span>
-            <span id="total-price">215000تومان</span>
+            <span id="total-price"></span>
           </p>
           <p id="wage" class="d-flex fs-7 justify-content-between">
             <span id="wage-title">حق سرویس و کارمزد:</span>
