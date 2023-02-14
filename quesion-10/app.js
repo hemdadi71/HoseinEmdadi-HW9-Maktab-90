@@ -73,6 +73,7 @@ for (const item of state) {
   item.maxPrice = 0;
   item.maxWage = 0;
 }
+let maxOrder = 0;
 // ......................Add Price To Each Product...................................................
 price.forEach(elem => {
   for (const item of state) {
@@ -89,6 +90,7 @@ const toatlOrder = arr => {
     total += item.maxPrice;
     wage += item.maxWage;
   }
+  maxOrder = total + wage;
   totalOrder.innerHTML = `${total} تومان`;
   wagePrice.innerHTML = `${wage} تومان`;
   paymentPrice.innerHTML = `${total + wage} تومان`;
@@ -129,19 +131,17 @@ const handleMinusOrder = e => {
 };
 // .......................................Payment Price............................................
 const handlePaymentPrice = e => {
-  e.preventDefault();
-  let newPeyment = +paymentPrice.innerHTML.split('تومان')[0];
   const input =
     e.currentTarget.parentElement.previousElementSibling.value.toLowerCase();
   if (input === 'golden') {
     discount.innerHTML = `${30} درصد`;
-    paymentPrice.innerHTML = `${newPeyment - newPeyment * 0.3} تومان`;
+    paymentPrice.innerHTML = `${maxOrder - maxOrder * 0.3} تومان`;
   } else if (input === 'silver') {
     discount.innerHTML = `${20} درصد`;
-    paymentPrice.innerHTML = `${newPeyment - newPeyment * 0.2} تومان`;
+    paymentPrice.innerHTML = `${maxOrder - maxOrder * 0.2} تومان`;
   } else if (input === 'bronze') {
     discount.innerHTML = `${10} درصد`;
-    paymentPrice.innerHTML = `${newPeyment - newPeyment * 0.1} تومان`;
+    paymentPrice.innerHTML = `${maxOrder - maxOrder * 0.1} تومان`;
   }
   form.reset();
 };
