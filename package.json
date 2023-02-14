@@ -2,5 +2,16 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "live-server": "^1.2.2"
-  }
+  },
+  "name": "hoseinemdadi-hw9-maktab-90",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "ls": "live-server --browser=chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
