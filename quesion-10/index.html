@@ -12,13 +12,13 @@
     <title>Document</title>
   </head>
   <body class="bg-bodys font-vazir">
-    <main class="container-fluid">
+    <main id="container" class="container-fluid">
       <section
         class="row mt-5 d-flex justify-content-center justify-content-md-between px-3 px-sm-4 px-xl-5"
       >
         <!-- Items -->
         <section
-          class="col-12 bg-main rounded-2 pb-4 mb-5 col-md-7 col-xl-8 col-xxl-9"
+          class="col-12 bg-main rounded-2 pb-4 mb-5 col-md-7 col-xl-8 col-xxl-8"
         >
           <p class="text-center fs-5 py-3 border-3 border-bottom">
             رستوران مک دونالد شعبه تهران
@@ -468,7 +468,7 @@
 
         <!--....................................... Order................................................... -->
         <section
-          class="col-8 col-sm-5 col-md-4 col-xl-3 col-xxl-2 mb-4 bg-main h-25 p-3 rounded-2 position-sticky sticky-top"
+          class="col-10 col-sm-6 col-md-4 col-xl-3 col-xxl-2 mb-4 bg-main h-25 p-3 rounded-2"
         >
           <p id="total" class="d-flex fs-7 justify-content-between">
             <span id="total-title">جمع کل سفارشات:</span>
@@ -476,14 +476,15 @@
           </p>
           <p id="wage" class="d-flex fs-7 justify-content-between">
             <span id="wage-title">حق سرویس و کارمزد:</span>
-            <span id="wage-price">16250 تومان</span>
+            <span id="wage-price">0 تومان</span>
           </p>
           <p id="discount" class="d-flex fs-7 justify-content-between">
             <span id="discount-title">تخفیف:</span>
             <span id="discount-percent">0 درصد</span>
           </p>
-          <form action="#" class="form-group position-relative mb-3">
+          <form action="#" id="form" class="form-group position-relative mb-3">
             <input
+              name="discountInput"
               type="text"
               class="border-0 rounded-2 fs-8 form-control shadow-none"
               placeholder="کد تخفیف"
@@ -492,6 +493,7 @@
               class="bg-button d-inline px-1 rounded-start position-absolute top-0 start-0 h-100"
             >
               <img
+                id="tick"
                 src="img/tick.png"
                 alt="tick"
                 width="16px"
@@ -504,14 +506,28 @@
             class="d-flex fs-7 justify-content-between bg-price p-1 rounded-1"
           >
             <span id="amount-title">مبلغ قابل پرداخت:</span>
-            <span id="amount-percent">223500 تومان</span>
+            <span id="payment">0 تومان</span>
           </p>
-          <div class="btn bg-button text-white fs-7 d-block rounded-1">
+          <div id="orderBtn" class="btn bg-button text-white fs-7 d-block rounded-1">
             ثبت سفارش
           </div>
         </section>
       </section>
     </main>
+    <section
+      id="modal"
+      class="position-absolute bg-black start-0 w-100 h-100 top-0 overflow-hidden opacity-50 d-none"
+    ></section>
+    <div
+      id="modal-body"
+      class="position-fixed bg-white py-4 px-5 rounded-2 text-center d-none"
+      data-mdb-toggle="animation"
+      data-mdb-animation-reset="true"
+      data-mdb-animation="pulse"
+    >
+      <p id="modalText"></p>
+      <button id="button" class="btn bg-button text-white"></button>
+    </div>
     <script
       defer
       src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
