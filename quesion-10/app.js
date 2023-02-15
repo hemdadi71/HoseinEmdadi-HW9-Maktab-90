@@ -90,10 +90,10 @@ const toatlOrder = arr => {
     total += item.maxPrice;
     wage += item.maxWage;
   }
-  maxOrder = total + wage;
   totalOrder.innerHTML = `${total} تومان`;
   wagePrice.innerHTML = `${wage} تومان`;
   paymentPrice.innerHTML = `${total + wage} تومان`;
+  maxOrder = total + wage;
 };
 // .....................................Add Order..................................................
 const handleAddOrder = e => {
@@ -129,7 +129,7 @@ const handleMinusOrder = e => {
   }
   toatlOrder(state);
 };
-// .......................................Payment Price............................................
+// .......................................Payment Price After Discount............................................
 const handlePaymentPrice = e => {
   const input =
     e.currentTarget.parentElement.previousElementSibling.value.toLowerCase();
@@ -167,6 +167,7 @@ const handleHideModal = () => {
   modal.classList.remove('d-block');
   modalBody.classList.add('d-none');
   modalBody.classList.remove('d-block');
+  location.reload();
 };
 // ................................................................................................
 add.forEach(item => item.addEventListener('click', handleAddOrder));
