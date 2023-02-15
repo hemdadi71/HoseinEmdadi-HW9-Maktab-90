@@ -21,9 +21,9 @@ const showTooltip = e => {
   } else {
     toolTipText.style.bottom = '40px';
   }
-  // console.log(getComputedStyle(tooltip).marginTop);
-  console.log(parseInt(getComputedStyle(toolTipText).height));
-  console.log(e.currentTarget.getBoundingClientRect().top);
+  
+  // console.log(parseInt(getComputedStyle(toolTipText).height));
+  // console.log(e.currentTarget.getBoundingClientRect().top);
 };
 // ................................................................................
 const hideTooltip = e => {
@@ -32,5 +32,4 @@ const hideTooltip = e => {
 // ....................................................................................
 tooltip.forEach(element => element.addEventListener('mouseenter', showTooltip));
 tooltip.forEach(element => element.addEventListener('mouseleave', hideTooltip));
-// tooltip.addEventListener('mouseenter', showTooltip);
-// tooltip.addEventListener('mouseleave', hideTooltip);
+
