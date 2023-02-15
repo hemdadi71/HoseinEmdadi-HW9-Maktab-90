@@ -4,10 +4,10 @@ const text = document.getElementById('text');
 
 const hideText = (txt, fun) => {
   txt.classList.add('d-none');
-  return setTimeout(fun, 5000);
+  setTimeout(fun, 5000);
 };
 const hideBtn = () => {
-  return hider.classList.add('d-none');
+  hider.classList.add('d-none');
 };
 
 hider.addEventListener('click', () => hideText(text, hideBtn));
