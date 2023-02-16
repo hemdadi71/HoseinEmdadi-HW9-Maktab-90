@@ -20,58 +20,47 @@ const state = [
   {
     id: 1,
     price: 8000,
-    wage: 1000,
   },
   {
     id: 2,
     price: 10000,
-    wage: 2000,
   },
   {
     id: 3,
     price: 10000,
-    wage: 3000,
   },
   {
     id: 4,
     price: 20000,
-    wage: 4000,
   },
   {
     id: 5,
     price: 25000,
-    wage: 5000,
   },
   {
     id: 6,
     price: 10000,
-    wage: 6000,
   },
   {
     id: 7,
     price: 6000,
-    wage: 0,
   },
   {
     id: 8,
     price: 5000,
-    wage: 0,
   },
   {
     id: 9,
     price: 8000,
-    wage: 1000,
   },
   {
     id: 10,
     price: 25000,
-    wage: 3000,
   },
 ];
 for (const item of state) {
   item.counter = 0;
   item.maxPrice = 0;
-  item.maxWage = 0;
 }
 let maxOrder = 0;
 // ......................Add Price To Each Product...................................................
@@ -85,15 +74,13 @@ price.forEach(elem => {
 // ................................Total Order.....................................................
 const toatlOrder = arr => {
   let total = 0;
-  let wage = 0;
   for (const item of arr) {
     total += item.maxPrice;
-    wage += item.maxWage;
   }
   totalOrder.innerHTML = `${total} تومان`;
-  wagePrice.innerHTML = `${wage} تومان`;
-  paymentPrice.innerHTML = `${total + wage} تومان`;
-  maxOrder = total + wage;
+  wagePrice.innerHTML = `${total * 0.05} تومان`;
+  paymentPrice.innerHTML = `${total + total * 0.05} تومان`;
+  maxOrder = total + total * 0.05;
 };
 // .....................................Add Order..................................................
 const handleAddOrder = e => {
@@ -104,7 +91,6 @@ const handleAddOrder = e => {
     ) {
       item.counter += 1;
       item.maxPrice = item.price * item.counter;
-      item.maxWage = item.wage * item.counter;
       e.currentTarget.nextElementSibling.innerHTML = item.counter;
       e.currentTarget.parentElement.nextElementSibling.innerHTML = `${item.maxPrice} تومان`;
     }
@@ -121,7 +107,6 @@ const handleMinusOrder = e => {
       ) {
         item.counter -= 1;
         item.maxPrice = item.price * item.counter;
-        item.maxWage = item.wage * item.counter;
         e.currentTarget.previousElementSibling.innerHTML = item.counter;
         e.currentTarget.parentElement.nextElementSibling.innerHTML = `${item.maxPrice} تومان`;
       }
