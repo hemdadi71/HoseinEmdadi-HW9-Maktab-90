@@ -58,6 +58,20 @@ const state = [
     price: 25000,
   },
 ];
+const off = [
+  {
+    name: 'golden',
+    percent: 30,
+  },
+  {
+    name: 'silver',
+    percent: 20,
+  },
+  {
+    name: 'bronze',
+    percent: 10,
+  },
+];
 for (const item of state) {
   item.counter = 0;
   item.maxPrice = 0;
@@ -118,15 +132,13 @@ const handleMinusOrder = e => {
 const handlePaymentPrice = e => {
   const input =
     e.currentTarget.parentElement.previousElementSibling.value.toLowerCase();
-  if (input === 'golden') {
-    discount.innerHTML = `${30} درصد`;
-    paymentPrice.innerHTML = `${maxOrder - maxOrder * 0.3} تومان`;
-  } else if (input === 'silver') {
-    discount.innerHTML = `${20} درصد`;
-    paymentPrice.innerHTML = `${maxOrder - maxOrder * 0.2} تومان`;
-  } else if (input === 'bronze') {
-    discount.innerHTML = `${10} درصد`;
-    paymentPrice.innerHTML = `${maxOrder - maxOrder * 0.1} تومان`;
+  for (let item of off) {
+    if (input === item.name) {
+      discount.innerHTML = `${item.percent} درصد`;
+      paymentPrice.innerHTML = `${
+        maxOrder - maxOrder * (item.percent / 100)
+      } تومان`;
+    }
   }
   form.reset();
 };
